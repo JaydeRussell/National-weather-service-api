@@ -28,6 +28,7 @@ const docTemplate = `{
                 "parameters": [
                     {
                         "type": "number",
+                        "default": 39.7456,
                         "description": "latitude",
                         "name": "lat",
                         "in": "path",
@@ -35,6 +36,7 @@ const docTemplate = `{
                     },
                     {
                         "type": "number",
+                        "default": -97.0892,
                         "description": "longitude",
                         "name": "long",
                         "in": "path",

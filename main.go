@@ -22,5 +22,5 @@ func main() {
 	f := e.Group("/forcast")
 	f.GET("/get/:lat/:long", forcastController.GetForcast)
 
-	log.Fatal(e.Start(":8081"))
+	log.Fatal(e.Start(":9001"))
 }

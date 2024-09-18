@@ -25,12 +25,14 @@ paths:
       description: Accepts latitude and longitude coordinates then returns a short
         forcast+ temperature characterization
       parameters:
-      - description: latitude
+      - default: 39.7456
+        description: latitude
         in: path
         name: lat
         required: true
         type: number
-      - description: longitude
+      - default: -97.0892
+        description: longitude
         in: path
         name: long
         required: true

@@ -1,9 +1,17 @@
 # National Weather Service api
 a simple passthrough api that connects to the national weather service
 
-#Write a RESTful API that serves the forecasted weather. Your server should expose an endpoint that:
+# running the program
+simply use the command `go run main.go`
 
-- [ ] Accepts latitude and longitude coordinates
-- [ ] Returns the short forecast for that area for Today (“Partly Cloudy” etc)
-- [ ] Returns a characterization of whether the temperature is “hot”, “cold”, or “moderate” (use your discretion on mapping temperatures to each type)
-- [ ] Use the National Weather Service API Web Service as a data source.
+# endpoints
+as of now there are only 2 exposed endpoints:
+
+`http://localhost:9001/swagger/`
+`http://localhost:9001/forcast/get/{lat}/{long}`
+
+## swagger
+this provides documentation for all other endpoints available on the API as well as a simple way to test them
+
+## /forcast/get/{lat}/{long}
+this endpoint takes a latitude and a longitude then returns a forcast in that area. Any errors that occur in the National Weather Service API will be bubbled up and returned.

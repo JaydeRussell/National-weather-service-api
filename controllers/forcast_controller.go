@@ -27,8 +27,8 @@ func NewForcastController(forcaster interfaces.Forcaster) *ForcastController {
 //	@Description	Accepts latitude and longitude coordinates then returns a short forcast+ temperature characterization
 //	@Tags			forcast
 //	@Produce		json
-//	@Param			lat		path		float64	true	"latitude"
-//	@Param			long	path		float64	true	"longitude"
+//	@Param			lat		path		float64	true	"latitude"  default(39.7456)
+//	@Param			long	path		float64	true	"longitude" default(-97.0892)
 //	@Success		200		{object}	data.Forcast
 //	@Failure		400		{object}	data.HTTPError
 //	@Failure		404		{object}	data.HTTPError
