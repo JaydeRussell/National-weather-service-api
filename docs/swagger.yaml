@@ -1,0 +1,60 @@
+definitions:
+  data.Forcast:
+    properties:
+      characterization:
+        type: string
+      shortForcast:
+        type: string
+    type: object
+  data.HTTPError:
+    properties:
+      message:
+        type: string
+      statusCode:
+        type: integer
+    type: object
+info:
+  contact: {}
+  description: This is a simple API designed to call the official National Weather
+    Service API
+  title: National Weather Service API
+  version: "1.0"
+paths:
+  /forcast/get/{lat}/{long}:
+    get:
+      description: Accepts latitude and longitude coordinates then returns a short
+        forcast+ temperature characterization
+      parameters:
+      - description: latitude
+        in: path
+        name: lat
+        required: true
+        type: number
+      - description: longitude
+        in: path
+        name: long
+        required: true
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/data.Forcast'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/data.HTTPError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/data.HTTPError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/data.HTTPError'
+      summary: Fetch a short forcast
+      tags:
+      - forcast
+swagger: "2.0"
