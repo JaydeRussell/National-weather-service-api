@@ -1,4 +1,4 @@
-# National-weather-service-api
+# National Weather Service api
 a simple passthrough api that connects to the national weather service
 
 #Write a RESTful API that serves the forecasted weather. Your server should expose an endpoint that:
