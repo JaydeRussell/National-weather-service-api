@@ -73,7 +73,7 @@ func TestGetForcast(t *testing.T) {
 			long: 8,
 
 			mockCallsExpected: 1,
-			mockErr:           data.HTTPError{StatusCode: 404, Message: "not found"},
+			mockErr:           &data.HTTPError{StatusCode: 404, Message: "not found"},
 
 			expectedStatus: 404,
 		},

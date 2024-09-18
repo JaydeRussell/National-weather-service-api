@@ -2,7 +2,7 @@
 a simple passthrough api that connects to the national weather service
 
 # running the program
-simply use the command `go run main.go`
+simply use the commands `go get` followed by `go run main.go` or `make run` (which just runs both for you)
 
 # endpoints
 as of now there are only 2 exposed endpoints:
